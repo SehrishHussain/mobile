@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://192.168.1.7:5000/api", // your Express backend
-  timeout: 10000,
+  baseURL: "http://192.168.1.2:5000/api", // your Express backend
+  timeout: 20000,
   headers: { "Content-Type": "application/json" },
 });
 

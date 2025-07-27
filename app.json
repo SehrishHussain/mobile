@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "TravelTrack",
+    "slug": "travel-track",
     "version": "1.0.0",
+    "owner": "sehrishaman",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,9 +14,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sehrish.traveltrack"
     },
     "android": {
+      "package": "com.sehrish.traveltrack",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
