@@ -1,26 +1,25 @@
 import * as Location from 'expo-location';
-import axios from 'axios';
 
-const BACKEND_URL = 'http://192.168.1.2:5000/api/location/save';
 
-export const sendLocation = async (token: string) => {
+console.log("here ib LocationTracker");
+
+export const getCurrentLocation = async () => {
   try {
     const { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== 'granted') {
       console.warn('Location permission not granted');
-      return;
+  
     }
 
     const location = await Location.getCurrentPositionAsync({});
-    const { latitude, longitude } = location.coords;
+   // const { latitude, longitude } = location.coords;
+    console.log("Getting Current Location");
+    return {
+    lat: location.coords.latitude,
+    lng: location.coords.longitude,
+    timestamp: new Date(),
+  };
 
-    await axios.post(
-      BACKEND_URL,
-      { lat: latitude, lng: longitude },
-      { headers: { Authorization: `Bearer ${token}` } }
-    );
-
-    console.log('Location sent');
   } catch (err) {
     console.error('Error getting or sending location:', err);
   }

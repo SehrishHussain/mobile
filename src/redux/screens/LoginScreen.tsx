@@ -37,8 +37,8 @@ const {
 
 WebBrowser.maybeCompleteAuthSession();
 const redirectUri = AuthSession.makeRedirectUri({ useProxy: true } as any);
-console.log("🔁 Using redirect URI:", redirectUri);
-console.log("🧪 googleEEEEEEEEExpoClientId = ", googleExpoClientId);
+//console.log("🔁 Using redirect URI:", redirectUri);
+//console.log("🧪 googleEEEEEEEEExpoClientId = ", googleExpoClientId);
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -59,16 +59,16 @@ const LoginScreen = () => {
     console.log("Trying to login with", email, password);
     try {
       const res = await loginUser({ email, password });
-      console.log("Login success:", res.data);
+      console.log("Login success:");
 
       dispatch(
         setCredentials({
           accessToken: res.accessToken,
-          user: res.user,
+          user: res.user.fullName,
         })
       );
 
-      await saveToSecureStore("refreshToken", res.refreshToken);
+      //await saveToSecureStore("refreshToken", res.refreshToken);
       Alert.alert("Login Success", `Welcome ${res.user.fullName}`);
       navigation.navigate("Home" as never);
     } catch (err: any) {
