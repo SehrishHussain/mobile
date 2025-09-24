@@ -1,6 +1,6 @@
 # Gilgit Baltistan Travel Companion
-
-A feature-rich mobile application built with React Native Expo that helps users discover and navigate through Gilgit Baltistan with AI-powered itinerary generation and real-time location tracking.
+## Project Objective
+This application is designed to enhance travel safety and accessibility for tourists exploring the rugged, low-connectivity mountain regions of Northern areas. The app provides essential itinerary planning and real-time location tracking capabilities to ensure secure navigation in remote environments with limited network coverage. 
 
 ![React Native](https://img.shields.io/badge/React_Native-0.72.6-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Expo](https://img.shields.io/badge/Expo-49.0.15-000020?style=for-the-badge&logo=expo&logoColor=white)
