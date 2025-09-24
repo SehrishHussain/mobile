@@ -1,9 +1,9 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import LoginScreen from "../redux/screens/LoginScreen";
-import TestScreen from "../redux/screens/TestScreen"; // remove later
-import HomeScreen from "../redux/screens/HomeScreen";
-import LocationTrackingScreen from "../redux/screens/LocationTrackingScreen";
+import LoginScreen from "../screens/LoginScreen";
+import TestScreen from "../screens/TestScreen"; // remove later
+import HomeScreen from "../screens/HomeScreen";
+import LocationTrackingScreen from "../screens/LocationTrackingScreen";
 
 const Stack = createNativeStackNavigator();
 

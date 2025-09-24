@@ -8,9 +8,9 @@ import {
   Alert,
 } from "react-native";
 import { useDispatch } from "react-redux";
-import { setCredentials } from "../authSlice";
-import { loginUser } from "../../api/authApi";
-import { saveToSecureStore } from "../../hooks/useSecureStore";
+import { setCredentials } from "../redux/authSlice";
+import { loginUser } from "../api/authApi";
+import { saveToSecureStore } from "../hooks/useSecureStore";
 import { useNavigation } from "@react-navigation/native";
 
 // Google Sign-In
@@ -22,8 +22,8 @@ import { Ionicons } from "@expo/vector-icons";
 
 import Constants from "expo-constants";
 
-import Input from "../../components/common/Input";
-import Button from "../../components/common/Button";
+import Input from "../components/common/Input";
+import Button from "../components/common/Button";
 
 
 

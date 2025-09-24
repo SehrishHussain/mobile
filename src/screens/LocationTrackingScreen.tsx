@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, ActivityIndicator } from 'react-native';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store'; // adjust path to your store
-import { getCurrentLocation} from '../../utils/locationTracker';
+import { RootState } from '../redux/store'; // adjust path to your store
+import { getCurrentLocation} from '../utils/locationTracker';
 
-import { saveLocationOrCache } from '../../services/locationService'; // wherever you saved it
+import { saveLocationOrCache } from '../services/locationService'; // wherever you saved it
 import * as Location from 'expo-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import HomeScreen from './HomeScreen';
